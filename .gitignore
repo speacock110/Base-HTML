@@ -10,6 +10,26 @@
 *.userosscache
 *.sln.docstates
 *.env
+*.code-workspace
+
+# Mac specific
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -22,8 +42,20 @@ mono_crash.*
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-x64/
-x86/
+[Dd]ebug/x64/
+[Dd]ebugPublic/x64/
+[Rr]elease/x64/
+[Rr]eleases/x64/
+bin/x64/
+obj/x64/
+
+[Dd]ebug/x86/
+[Dd]ebugPublic/x86/
+[Rr]elease/x86/
+[Rr]eleases/x86/
+bin/x86/
+obj/x86/
+
 [Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
@@ -310,9 +342,6 @@ node_modules/
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
 *.vbw
 
-# Visual Studio 6 auto-generated project file (contains which files were open etc.)
-*.vbp
-
 # Visual Studio 6 workspace and project file (working project files containing files to include in project)
 *.dsw
 *.dsp
@@ -416,3 +445,43 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# ── Web project security — never commit these to a public repository ──────────
+
+# .env variants (.env is matched above by *.env; these cover .env.local etc.)
+.env.*
+!.env.example
+!.env.sample
+
+# Secrets and credential files
+secrets.json
+secrets.yml
+secrets.yaml
+auth.json
+credentials.json
+credentials.yml
+credentials.yaml
+
+# SSL / TLS certificates and private keys (*.pfx already covered above)
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.jks
+
+# PHP
+vendor/
+error_log
+php_errors.log
+
+# Database files
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# Windows thumbnail / desktop cache (not covered above)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
